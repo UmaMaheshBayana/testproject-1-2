@@ -1,6 +1,3 @@
-***Multistage Dockerfile***
-
-```
 FROM openjdk:8 AS BUILD_IMAGE
 RUN apt-get update && apt-get install maven -y
 RUN git clone -b main https://github.com/UmaMaheshBayana/testproject1.git
@@ -17,4 +14,4 @@ COPY --from=BUILD_IMAGE testproject2/target/testproject2.war /usr/local/tomcat/w
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
 
-````
+
